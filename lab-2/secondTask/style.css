@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 15px;
+}
+
+img{
+    vertical-align: middle;
+}
+
+p{
+    margin: 10px;
+}
+
+.chapters{
+    margin: 20px;
+}
+
+.form{
+    margin: 30px;
+}
+
+h2{
+    margin: 10px;
+}
