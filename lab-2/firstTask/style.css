@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1{
+    margin: 20px auto;
+    color: red;
+}
+
+ul{
+    list-style-type: none;
+}
