@@ -1,0 +1,42 @@
+*{
+    font-family: Arial;
+    font-size: 20px;
+    text-indent: 40px;
+}
+
+p{
+    color: green;
+    text-align: center;
+}
+
+div{
+    text-align: justify;
+}
+
+.text-color{
+    color: red;
+}
+
+.single-line{
+    white-space: nowrap;
+}
+
+#cursiveBold{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.text-shadowed{
+    text-shadow: 5px -5px 3px black;
+}
+
+.text-lined-upper{
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+
+.indented{
+    word-spacing: 50px;
+    letter-spacing: 30px;
+}
