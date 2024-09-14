@@ -1,0 +1,35 @@
+.wrapper{
+    text-align: center;
+}
+
+h1{
+    color: red;
+}
+
+h2{
+    font-weight: bold;
+}
+ul{
+    list-style-type: none;
+}
+.li-bolded{
+    font-weight: bold;
+}
+.lined{
+    text-decoration: line-through;
+}
+.underlined{
+    text-decoration: underline;
+}
+.li-bgcolored{
+    background: yellow;
+}
+hr{
+    background-color: green;
+    height: 5px;
+    width: 400px;
+    border-radius: 5px;
+}
+#text-italic{
+    font-style: italic;
+}
