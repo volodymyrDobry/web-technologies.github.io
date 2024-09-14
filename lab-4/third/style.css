@@ -1,0 +1,27 @@
+ul>li>ul{
+    color: purple;
+}
+.main{
+    color:green;
+}
+
+.square{
+    list-style-type: square;
+}
+
+.pict{
+    list-style-image: url("check.png");
+}
+
+.none{
+    list-style-type: none;
+}
+
+.square li>a{
+    text-decoration: none;
+}
+
+.different li{
+    list-style-position: inside;  
+}
+
