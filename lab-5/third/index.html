@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <head>
+        <h1 align="center">Registration Form For New User</h1>
+    </head>
+    <main>
+        <form action=""  method="post" enctype="multipart/form-data">
+
+            <fieldset>
+                <legend>Authorization</legend>
+                <label for="email">E-mail address</label>
+                <input type="email" name="email" autocomplete="off" placeholder="Enter E-mail"
+                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  tabindex="1" required >
+                <br><br>
+                <label for="password" >Password</label>
+                <input type="password"  name="password" id="password" placeholder="Password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{6}$" tabindex="2" required>
+                <br><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Enter your name" value="name" tabindex="3">
+                <br><br>
+                <label for="birthday">Birthday</label>
+                <input type="date" name="birthday" id="" value="birthday" tabindex="4">
+                <br>
+                <label for="CV">CV</label>
+                <textarea name="CV" id="Cv" placeholder="Your cover letter" tabindex="5"></textarea>
+                <br>
+                <label for="tel">Yout phone number</label>
+                <input type="tel" value="tel" name="tel" pattern="^\+?\d{1,4}?[ -]?\(?\d{1,3}?\)?[ -]?\d{1,4}[ -]?\d{1,4}[ -]?\d{1,9}$" placeholder="+380-00-000-0000" tabindex="6">
+
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Sex</legend>
+                <input type="radio" id="male" name="gender" value="male" tabindex="7" checked>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" tabindex="8">
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female" tabindex="9">
+                <label for="female">Not defined</label>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Family</legend>
+                <input type="radio" name="status" id="married" tabindex="10">
+                <label for="married">Married</label>
+                <input type="radio" name="status" id="single" tabindex="11">
+                <label for="single" >Single</label>
+                <input type="radio" name="status" id="relation" tabindex="12" checked>
+                <label for="relation">In relation</label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Hobbies</legend>
+                <label for="fishing">Fishing</label>
+                <input type="checkbox" name="hobbies" id="fishing" tabindex="13">
+                <label for="gym">Gym</label>
+                <input type="checkbox" name="hobbies" tabindex="14">
+                <label for="dance">Dancing</label>
+                <input type="checkbox" name="hobbies" tabindex="15">
+                <label for="others">Other</label>
+                <input type="checkbox" name="hobbies" tabindex="16">
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Speciality</legend>
+                <select name="spec" id="spec" tabindex="17">
+                    <option value="BeckDev">Beckend Developer</option>
+                    <option value="FronDev">Frontend Developer</option>
+                    <option value="Devops">DevOps</option>
+                    <option value="DataAnalist">Data analytics</option>
+                    <option value="Other" selected>Other</option>
+                </select>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Country</legend>
+                <label for="countries">Select countries you have visited:</label>
+                <select id="countries" name="countries" tabindex="18" multiple>
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">UK</option>
+                    <option value="germany">Germany</option>
+                    <option value="japan">Japan</option>
+                    <option value="australia">Australia</option>
+                </select>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Favourite Sport</legend>
+                <label for="sports">Select your favorite sport:</label>
+                    <select id="sports" name="sports" tabindex="19">
+                    <optgroup label="Team Sports">
+                        <option value="football">Football</option>
+                        <option value="basketball">Basketball</option>
+                        <option value="volleyball">Volleyball</option>
+                    </optgroup>
+                    <optgroup label="Individual Sports">
+                        <option value="tennis">Tennis</option>
+                        <option value="badminton">Badminton</option>
+                        <option value="boxing">Boxing</option>
+                    </optgroup>
+                    <optgroup label="Water Sports">
+                        <option value="swimming">Swimming</option>
+                        <option value="surfing">Surfing</option>
+                        <option value="diving">Diving</option>
+                    </optgroup>
+                    <optgroup label="Extreme Sports">
+                        <option value="bungee">Bungee Jumping</option>
+                        <option value="skydiving">Skydiving</option>
+                        <option value="paragliding">Paragliding</option>
+                    </optgroup>
+                    </select>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Proggraming Language</legend>
+                <label for="languages">Search for a programming language:</label>
+                <input list="languages" id="language-input" name="language" tabindex="20">
+                <datalist id="languages">
+                    <option value="Python">
+                    <option value="JavaScript">
+                    <option value="Java">
+                    <option value="C++">
+                    <option value="Ruby">
+                    <option value="PHP">
+                    <option value="Go">
+                    <option value="Swift">
+                </datalist>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your voice</legend>
+                <label for="voice">Voice File</label>
+                <input type="file" accept="audio/mp3" tabindex="2" multiple>
+            </fieldset>
+            <button type="submit" method="post">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
