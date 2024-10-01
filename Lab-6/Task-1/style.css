@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.main{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.article-container{
+    width: 1140px;
+    padding: 20px;
+    column-count: 3;
+    column-gap: 35px;
+    column-rule: 5px dotted  red;
+    
+}
+
+.img{
+    padding: 10px;
+}
+
+.two-cat{
+    float: right;
+}
+
+.lying-cat{
+    float: left;
+}
+
+.red-cat{
+    float: right;
+}
+
+.standing-cat{
+    float: right;
+}
