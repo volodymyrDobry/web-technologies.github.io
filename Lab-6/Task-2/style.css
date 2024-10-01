@@ -1,0 +1,100 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.main{
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.wrapper{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.block{
+    width: 300px;
+    height: auto;
+    display: inline-block;
+    padding-left: 7px;
+    margin: 5px;
+}
+
+.block-has-green-border{
+    border: 5px solid green;
+}
+
+.block1{
+    border-radius: 50px; 
+}
+
+.block2{
+    border-radius: 100px 0px;
+}
+
+.block3{
+    border-radius: 35px 150px;
+}
+
+.block-has-multiple-greeen-border{
+    border: 30px solid;
+    border-color: rgb(1, 45, 1) green rgb(1, 45, 1) green;
+}
+
+.block4{ 
+    border-radius: 100px/25px;
+}
+
+.block5{  
+    border-radius: 200px 300px / 120px 40px;
+}
+
+.block6{ 
+    border-bottom-right-radius: 100%;
+}
+
+
+.block-has-img{
+    border: 15px solid transparent;   
+}
+
+.rombs{
+    padding: 15px;
+}
+
+.block7{
+    border-image: url(border.png) 19 stretch;
+}
+
+.block8{
+    border-image: url("border.png") 20% round;
+}
+
+.block9{
+    border-image: url(border.png) 30 round;
+}
+
+.block10{
+    border-image: url(border3.png) 17 stretch;
+}
+
+.block11{
+    border-image: url(border3.png) 12 round
+}
+
+.block12{
+    border-image: url(border3.png) 8 stretch;
+}
