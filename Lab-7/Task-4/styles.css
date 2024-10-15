@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 200vh;
+}
+
+.header{
+    height: 10%;
+    padding: 10px;
+    
+}
+
+.header-menu-list{
+    background-color: gray;
+    display: inline-block;
+    position: fixed;
+    width: 189px;
+    height: 54px;
+    z-index: 1;
+}
+
+.header-menu-list::after{
+    content: '';
+    display: inline-block;
+    clear: both;
+}
+
+.header::after{
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.header-menu-item{
+    display: inline-block;    
+}
+
+.item{
+    padding: 27px 30px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.home-img{
+    background-image: url("home_24dp_FFFF_FILL0_wght400_GRAD0_opsz24.png");
+}
+
+.search-img{
+    background-image: url("search_24dp_FFFF_FILL0_wght500_GRAD0_opsz24.png");
+}
+
+.message-img{
+    background-image: url("mail_24dp_FFFF_FILL0_wght500_GRAD0_opsz24.png");
+}
+
+.item:hover,.item:focus,.item:active{
+    background-color: lightgreen;
+}
+
+.main{
+    height: 1070px;
+}
+
+.main-menu-list{
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+  
+}
+
+
+.main-item img{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 2px;
+}
+
+.main-item span{
+    vertical-align: middle;
+}
+
+.main-item{
+   display:block;
+    text-decoration: none;
+    color: white;
+    padding: 15px 15px 15px 0px;
+}
+
+
+.main-menu-item:hover >  .main-item,
+.main-menu-item:focus > .main-item,
+.main-menu-item:active > .main-item {
+    opacity: 0.8;
+}
+
+.main-menu-item{
+    background-color: #006cb7;
+    margin: 0px 0px 2px 0px;
+}
+
+.about{
+    position: absolute;
+    right: -60%;
+    top: 0;
+    display: none;
+}
+
+.staff{
+    position: absolute;
+    top: 33%;
+    right: -90%;
+    display: none;
+}
+
+.about:hover{
+    display: block;
+}
+
+.main-item:hover + .about{
+    display: block;
+}
+
+.main-item:hover + .staff{
+    display: block;
+}
+
+.staff:hover{
+    display: block;
+}
