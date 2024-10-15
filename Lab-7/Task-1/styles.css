@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100%;
+    height: 500px;
+    padding: 80px;
+}
+
+.main-container{
+    margin: 0 auto;
+    width: 1140px;
+    position: relative;    
+    height: 100%;
+}
+
+.blue-container{
+    background-color: blue;
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    left: 15%;
+}
+
+.green-container{
+    height: 120px;
+    width: 200px;
+    background-color: green;
+    bottom:33%;
+    left: 0%;
+    position: absolute;
+}
+
+.container-top{
+    top: 15%;
+}
+
+.container-bottom{
+    bottom: 15%;
+}
+
