@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    background-color: #bbbbbb;
+    height: 50%;
+    width: 35%;
+    position: relative;
+}
+
+.forecast-list{
+    list-style: none;
+    vertical-align: bottom;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px
+}
+
+.cloud{
+    height: 200px;
+    width: 300px;
+    display: inline-block;
+    position: absolute;
+    right: -46%;
+    top: 10%
+}
+
+.temperature-container{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.temperature-wrapper{
+    position: absolute;
+    top: 3%;
+    left: 20%;
+    height: 77%;
+    width: 45%;
+    z-index: 1;
+}
+
+.forecast-container{
+    position: absolute;
+    bottom: 4%;
+    right: 5%;
+    background-color: #c1c1c1;
+    height: 30%;
+    box-shadow: 5px 5px #8c8c8c;
+    width: 45%;
+}
+
+.forecast-item{
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.button{
+    display: inline-block;
+    background-color: #848484;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 30px;
+    opacity: 0.5;
+    margin: 0;
+}
+
+.button:hover{
+    opacity: 1;
+}
+
+.button:active{
+    padding: 29px;
+}
+
+.button-forward{
+    background-image: url("arrow_forward_24dp_00000_FILL0_wght100_GRAD0_opsz24.png");
+}
+
+.button-back{
+    background-image: url("arrow_back_24dp_00000_FILL0_wght100_GRAD0_opsz24.png");
+}
+
+.arrow-img{
+    display: inline-block;
+    
+}
+
+.temperature{
+    color: #848484;
+    font-size: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+}
+
+.temperature-buttons-container{
+    position: absolute;
+    top: 30%;
+    left: -25%;
+}
+
+.day{
+    display: block;
+    color: #9b9b9b
+}
