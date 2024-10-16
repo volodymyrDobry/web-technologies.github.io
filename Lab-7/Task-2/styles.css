@@ -44,11 +44,11 @@
 .content-block{
     background-color:aqua;
     position: absolute;
-    display: inline-block;
     padding: 63px 34px;
     border: 1px solid black;
+    display:none;
 }
 
 .hovered-block:hover + .content-block{
-    bottom: 25%;
+    display:inline-block;
 }
