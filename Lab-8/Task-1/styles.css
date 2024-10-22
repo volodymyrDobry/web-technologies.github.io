@@ -1,0 +1,76 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    width: 500px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.weather-place{
+    font-size: 30px;
+    color: #444444;
+    margin-bottom: 10px;
+}
+
+.weather-now{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px 20px 0px;
+    padding-right: 20%;
+}
+
+.weather-now-data-list{
+    list-style-type: none;
+    align-self: flex-end;    
+}
+
+.forecast-list-item{
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid;
+    align-items: center;
+    padding: 5px 0px;
+}
+
+.now-image-container{
+    display: flex;
+   
+    
+}
+
+.weather-now-img{
+    height: 100px;
+    width: 100px;
+}
+
+.degree-now{
+    font-size: 40px;
+    color: #444444;
+}
+
+
+.day{
+    width: 90px;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+
+.forecast-img{
+    height: 50px;
+    width: 50px;
+}
+
+
+.data-list-item{
+    color: #8f8f8f;
+}
+
+.data, .overcast, .now-day, .pollen, .lower-bound{
+    color: #444444;
+}

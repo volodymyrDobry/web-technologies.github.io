@@ -1,0 +1,372 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header{
+    background-color: black;
+    padding: 10px;
+}
+
+#burger-button{
+    display: none;
+}
+
+.burger-button{
+    padding: 20px;
+    background-color: red;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.burger-button::after, .burger-button::before, .burger-button > span::after{
+    content: '';
+    position: absolute;
+    border-bottom: 3px solid #ffff;
+    width: 70%;
+    right: 5px;
+}
+
+.burger-button::after{
+    top: 6px;
+}
+
+.burger-button > span::after{
+    bottom: 6px;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.header-nav-list{
+    display: flex;
+    padding: 5px;
+}
+
+.header-nav-item{
+    display: inline-block;
+    margin-right: 2px;
+    padding: 10px 20px;
+}
+
+.header-nav-item:hover{
+    background-color: #323245;
+}
+
+.nav-item{
+    text-decoration: none;
+    color: white;
+    text-transform: lowercase;
+}
+
+.header-logo-container > img{
+    height: 50px;
+    width: 50px;
+}
+
+.header-slogan{
+    background-color: #f0f4f5;
+    padding: 65px;
+    margin-bottom: 30px;
+    
+}
+
+.slogan{
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.favourite{
+    background-color: red;
+    background-image: url("favorite_24dp_FFFFFF_FILL0_wght0_GRAD0_opsz24.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.favourite:hover{
+    border: 0;
+    border-radius: 0;
+    opacity: 0.7;
+    background-color: red;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.works-section-addititve{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn{
+    padding: 10px;
+    text-decoration: none;
+    color: #ffff;
+}
+
+.btn-filter{
+    background-color: red;
+}
+
+.btn:hover{
+    opacity: 0.8;
+    transition: 0.1s;
+}
+
+.works-section-title>span{
+    color: red;
+}
+
+.works-section{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+}
+
+.works{
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 45vw;
+}
+
+.work{
+    height: 30%;
+    width: 32%;
+}
+
+.colaboration{
+    width: 70%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mail-icon{
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+}
+
+.btn-contact{
+    background-color: red;
+}
+
+.colaboration-title{
+    padding: 10px 0px 15px 0px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+.occupation{
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+.title,.description{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.title > span{
+    color: red;
+}
+
+.occupation-cards-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.occupation-card{
+    text-align: center;
+    padding: 20px;  
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.card-logo{
+    max-width: 60px;
+    margin-bottom: 20px;
+}
+
+.card-title{
+    margin-bottom: 10px;
+}
+
+
+.fromJournal-container{
+    width: 70%;
+}
+
+.fromJournal-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fromJournal-card{
+    display: flex;
+    max-width: 49%;
+    padding: 10px;
+}
+
+.fromJournal-card-img-container{
+    width: 40%;
+}
+
+.fromJournal-card-img{
+    width: 40%;
+    height: auto;
+    margin-right: 10px;
+}
+
+.fromJournal-card-date{
+    color: #e1e1e1;
+    margin-bottom: 5px;
+    text-transform: lowercase;
+}
+
+.fromJournal-card-title,.fromJournal-card-description{
+    margin-bottom: 10px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    margin-top: 100px;
+    background-color: #29292c;
+    color: #ffff;
+}
+
+.footer-ownership{
+    padding: 15px 10px;
+}
+
+.footer-list{
+    list-style-type: none;
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+}
+
+.footer-item{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.footer-item > img{
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+}
+
+@media (max-width:768px){
+    .work{
+        width: 49%;
+        height: auto;
+    }
+    .works{
+        height: 125vw;
+    }
+
+    .occupation-cards-container{
+        flex-wrap: wrap;
+    }
+
+    .occupation-card{
+        width: 49%;
+    }
+
+    .fromJournal-cards-container{
+        flex-direction: column;
+    }
+
+    .fromJournal-card{
+       max-width: 99%;
+    }
+
+    .header-nav-list{
+        display: none;
+    }
+    .burger-button{
+        display: inline-block;
+    }
+
+
+    .header-nav{
+        position: relative;
+    }
+
+    #burger-button:checked ~ .header-nav-list{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top: 63px;
+        width: 100%;
+        height: 32vh;
+        background-color: #29292c;
+        opacity: 0.8;
+    }
+
+    
+    .header-nav-item{
+        flex: 1;
+        text-align: center;
+    }
+
+    .nav-item{
+        padding: 0;
+        text-align: center;
+    }
+
+    
+
+    .header{
+        position: sticky;
+        top: 0;
+    }
+
+    
+
+}
+
+@media(max-width:576px){
+    .work{
+        width: 99%;
+    }
+    .works{
+        height: 460vw;
+    }
+
+    .occupation-card{
+        width: 99%;
+    }
+
+    .fromJournal-card{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
