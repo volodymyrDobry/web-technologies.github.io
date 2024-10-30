@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: 1fr 9fr 1fr;
+    gap: 5px;
+    height: 100vh;
+}
+
+.wrapper > *{
+    background-color: yellow;
+}
+
+.header{
+    grid-column: span 9;
+}
+
+.nav-aside{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.main{
+    grid-column: span 6;
+}
+
+.footer{
+    grid-column: span 7;
+    
+}
