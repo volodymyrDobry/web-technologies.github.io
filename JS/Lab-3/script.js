@@ -19,7 +19,7 @@ function calculateFactorial(number) {
     }
     return factorial;
 }
-console.log(calculateFactorial(10));
+console.log(calculateFactorial(5));
 
 function getMonthByNumber(number){
     switch (number){
@@ -75,8 +75,6 @@ countVowLetter = (value) => {
 console.log(countVowLetter("some good string"));
 
 function calculateExponentExpression(base,exponent)
-
-
 {
     return base**exponent;
 }
