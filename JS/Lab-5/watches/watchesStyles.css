@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    color: white;
+    flex-direction: column;
+}
+.container {
+    text-align: center;
+    width: 300px;
+}
+.clock-section, .timer-section, .calendar-section, .birthday-section {
+    background: black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.digital-clock, .countdown-display, .calendar-display, .birthday-countdown {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+.digital-clock span {
+    display: inline-block;
+    width: 30px; /* Ensures the width stays constant */
+    text-align: center; /* Centers text */
+}

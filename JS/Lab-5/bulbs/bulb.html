@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="bulbStyles.css">
+    <title>Bulbs</title>
+</head>
+<body>
+<main class="main-container">
+    <div class="main-container__bulbs-container">
+        <select id="bulbType">
+            <option value="incandescent">Incandescent</option>
+            <option value="energy-saving">Energy-Saving</option>
+            <option value="led">LED</option>
+        </select>
+        <div class="bulbs-container__bulb">
+            <div class="bulb__end"></div>
+            <button class="bulb__btn">ON</button>
+            <div class="bulb__light"></div>
+            <input type="range" class="bulbs-container__brightness-control" min="0" max="100" value="50" step="10">
+        </div>
+    </div>
+</main>
+<script src="bulbScript.js"></script>
+</body>
+</html>

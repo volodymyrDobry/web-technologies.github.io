@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock & Timer</title>
+    <link rel="stylesheet" href="watchesStyles.css">
+</head>
+<body>
+<div class="container">
+    <div class="clock-section">
+        <h2>Digital Clock</h2>
+        <div class="digital-clock">
+            <span class="digital-clock__hours">00</span>:
+            <span class="digital-clock__minutes">00</span>:
+            <span class="digital-clock__seconds">00</span>
+        </div>
+    </div>
+
+    <div class="timer-section">
+        <h2>Countdown Timer</h2>
+        <input type="datetime-local" class="timer-input">
+        <div class="countdown-display"></div>
+    </div>
+
+    <div class="calendar-section">
+        <h2>Calendar</h2>
+        <input type="month" class="calendar-input">
+        <div class="calendar-display">Current Month</div>
+    </div>
+
+
+    <script src="watchesScripts.js"></script>
+</div>
+</body>
+</html>

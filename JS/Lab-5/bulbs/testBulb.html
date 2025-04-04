@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb with Brightness Control</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+
+        .bulb {
+            width: 100px;
+            height: 100px;
+            background-color: #444;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 0, 0);
+            transition: background-color 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .on {
+            background-color: yellow;
+        }
+
+        #brightness {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="bulb" id="bulb"></div>
+<p id="brightness">Brightness: 0%</p>
+
+<script>
+    const bulb = document.getElementById("bulb");
+    const brightnessText = document.getElementById("brightness");
+    let brightness = 0;
+    let isOn = false;
+
+    bulb.addEventListener("click", function () {
+        isOn = !isOn;
+        updateBulb();
+    });
+
+    bulb.addEventListener("wheel", function (event) {
+        if (!isOn) return; // Only change brightness if the bulb is on
+        if (event.deltaY < 0) {
+            brightness = Math.min(brightness + 10, 100); // Increase brightness
+        } else {
+            brightness = Math.max(brightness - 10, 0); // Decrease brightness
+        }
+        updateBulb();
+    });
+
+    function updateBulb() {
+        if (isOn) {
+            bulb.style.backgroundColor = `rgb(255, 255, ${100 - brightness})`;
+            bulb.style.boxShadow = `0 0 ${brightness * 0.4}px rgba(255, 255, 0, ${brightness / 100})`;
+        } else {
+            bulb.style.backgroundColor = "#444";
+            bulb.style.boxShadow = "0 0 10px rgba(255, 255, 0, 0)";
+        }
+        brightnessText.textContent = `Brightness: ${isOn ? brightness : 0}%`;
+    }
+</script>
+
+</body>
+</html>
