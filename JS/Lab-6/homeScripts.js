@@ -207,6 +207,12 @@ function addCardToPage(item){
 }
 
 function displayCards(cards) {
+    if (cards.length === 0){
+        let emptyPageMsg = document.createElement("p");
+        emptyPageMsg.innerHTML = "No Products in the current collection";
+        cardsContainer.appendChild(emptyPageMsg);
+        return;
+    }
     for (const item of cards) {
         addCardToPage(item);
     }
@@ -372,7 +378,8 @@ sortSelect.addEventListener('change',function (param){
     rerenderCards();
 });
 
-displayCards(products);
+let emptyList = [];
+displayCards(emptyList);
 renderSelectOptions(filtersParams, filterSelect);
 renderSelectOptions(sortParams, sortSelect);
 setOverallPrice(calculateOverallCardsPrice(products));
