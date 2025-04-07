@@ -101,6 +101,7 @@
 /*Main*/
 .main{
     width: 70%;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     gap: 20px;
