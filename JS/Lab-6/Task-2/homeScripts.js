@@ -296,6 +296,10 @@ function openModal(buttonText,itemId) {
 }
 
 function closeModal() {
+    document.getElementById('modal-id').value = null;
+    document.getElementById('modal-price').value = null;
+    document.getElementById('modal-name').value = null;
+    document.getElementById('modal-img').value = null;
     modalOverlay.style.display = 'none';
 }
 
@@ -362,6 +366,7 @@ form.addEventListener('submit', function (e) {
         const createdProduct = createNewProduct(productData);
         msg = `Product with id ${createdProduct.id} was added`;
     }
+
 
     showToast(msg);
     rerenderCards();
