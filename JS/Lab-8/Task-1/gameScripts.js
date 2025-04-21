@@ -1,6 +1,6 @@
 const startGameBtn = document.getElementById("startGameBtn");
 const resetBtn = document.getElementById("resetGameBtn");
-
+const restartBtn = document.getElementById("restartBtn");
 const game = {
     roundQuantity:1,
     currentRound:1,
@@ -10,10 +10,13 @@ const game = {
     users:users,
     currentActiveUser:0
 }
+const menuBtn = document.querySelector(".main-link");
 
-const matchHistory = [];
+const matchHistory = {};
 startGameBtn.addEventListener("click",setUpGameSettingsAndStartHandler);
 resetBtn.addEventListener("click",resetSettings);
+restartBtn.addEventListener("click",restartGameHandler);
+menuBtn.addEventListener("click",menuRedirectionHandler);
 
 function setUpGameSettingsAndStartHandler(){
     const difficulty = document.getElementById("difficulty");
@@ -21,6 +24,7 @@ function setUpGameSettingsAndStartHandler(){
     const playerMode = document.getElementById("playerMode");
     if (Number(playerMode.value) > 1){
         setUpDoublePlayerMode(Number(difficulty.value));
+        game.roundQuantity = Number(document.getElementById("roundQuantity").value);
     }else{
         setUpSinglePlayerMode(Number(difficulty.value));
     }
@@ -49,10 +53,10 @@ function startGame(){
 
 function expiredTimeHandler(){
     if (!game.twoPlayersMode){
-        showSinglePlayerModeEndScreen();
+        endGameHandler();
     }
-    if (users[0].timeLeft === 0 &&  users[1].timeLeft === 0){
-        showDoublePlayerModeEndScreen();
+    else if (users[0].timeLeft === 0 &&  users[1].timeLeft === 0){
+        endGameHandler();
     }else{
         switchUser();
     }
@@ -60,40 +64,58 @@ function expiredTimeHandler(){
 
 function endGameHandler(){
     if (!game.twoPlayersMode){
-        showSinglePlayerModeEndScreen();
+        logSingleUserActions();
+        showEndGamePage();
     }
     else{
        logUsersActions();
        if (game.currentRound < game.roundQuantity){
-           game.currentRound++;
            nextRound();
        }else{
-           showDoublePlayerModeEndScreen();
+           showEndGamePage();
        }
     }
 }
 
-function logUsersActions(){
-    const record = {
-        matchNumber:game.currentRound,
-        user1:{
-            attempts:users[0].attempts,
-            points:users[0].points
+function logSingleUserActions(){
+    const roundKey = "round" + game.currentRound;
+    matchHistory[roundKey] = [
+        {
+            username: game.users[0].username,
+            isWon: game.users[0].points === (game.cardsQuantity),
+            attempts: game.users[0].attempts,
+            points: game.users[0].points,
+            timeSpent: game.difficulty - game.users[0].timeLeft
         },
-        user2:{
-            attempts:users[1].attempts,
-            points:users[1].points
+    ];
+}
+
+function logUsersActions(){
+    const roundKey = "round" + game.currentRound;
+    matchHistory[roundKey] = [
+        {
+            username: game.users[0].username,
+            isWon: game.users[0].points > game.users[1].points,
+            attempts: game.users[0].attempts,
+            points: game.users[0].points,
+            timeSpent: game.difficulty - game.users[0].timeLeft
+        },
+        {
+            username: game.users[1].username,
+            isWon: game.users[1].points > game.users[0].points,
+            attempts: game.users[1].attempts,
+            points: game.users[1].points,
+            timeSpent: game.difficulty - game.users[1].timeLeft
         }
-    };
-    matchHistory.push(record)
+    ];
 }
 
 function nextRound(){
+    game.currentRound++;
     restartGame();
 }
 
 function restartGame(){
-    hideResultScreen();
     resetUsers();
     startGame();
 }
@@ -103,4 +125,14 @@ function resetSettings(){
     document.getElementById("cardQuantity").selectedIndex = 0;
     document.getElementById("playerMode").selectedIndex = 0;
     showUsernameInputs();
+}
+
+function restartGameHandler(){
+    resultWindow.style.display = "none";
+    restartGame();
+}
+
+function menuRedirectionHandler(){
+    resultWindow.style.display = "none";
+    introContainer.style.display = "flex";
 }

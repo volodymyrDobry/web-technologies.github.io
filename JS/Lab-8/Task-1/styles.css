@@ -210,115 +210,159 @@ label[for="roundQuantity"] {
 
 /*Result Block*/
 
-.result {
+
+ul{
+    list-style-type: none;
+}
+.result-window {
     display: none;
-    margin: 30px auto;
-    padding: 20px;
-    max-width: 800px;
-    background-color: #fff;
+    width: 50%;
+    height: 700px;
+    background-color: white;
+    border: 1px solid #ccc;
     border-radius: 12px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-.result-title {
-    font-size: 28px;
+.result-window-header{
+    margin-bottom: 20px;
+}
+
+
+.rounds{
+    display: flex;
+    list-style-type: none;
+}
+
+.round{
+    margin-right: 10px;
+}
+
+.round-link{
+    padding: 5px 0px;
+    color: grey;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.round-link:hover{
+    color: black;
+}
+
+.active{
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.player-stat-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-game-results-list{
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+.player-stat{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.player-stat:last-child{
+    border-bottom: none;
+}
+
+.game-result-title {
+    font-size: 2rem;
+    font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
 }
 
-.result-single,
-.result-multiplayer {
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
+.game-result-title.won {
+    color: #2ecc71;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.result-rounds-wrapper {
+.game-result-title.lost {
+    color: #e74c3c;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-result-title {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.item-title{
+    font-weight: bold;
+}
+
+.result-window-footer {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+}
+
+.result-window-footer h2 {
+    font-size: 2rem;
+    color: #2ecc71;
     margin-bottom: 20px;
-    padding-left: 10px;
 }
 
-.result-rounds-wrapper .round {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 6px;
-}
-
-.result-player {
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #eef3f9;
-    margin: 10px 0;
-}
-
-.result-players-summary {
+.btns-section {
     display: flex;
+    justify-content: center;
     gap: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
-.result-player h4 {
-    margin-bottom: 6px;
-    color: #2a4d69;
-}
-
-.hidden {
-    display: none;
-}
-
-.restart-btn {
-    background-color: #f44336;
-    color: white;
+.btn-restart,
+.main-link {
     padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 16px;
+    font-size: 1rem;
+    text-decoration: none;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.restart-btn:hover {
-    background-color: #d32f2f;
+.btn-restart {
+    background-color: #3498db;
+    color: white;
 }
 
-.result-multiplayer {
-    padding: 20px;
+.btn-restart:hover {
+    background-color: #2980b9;
+}
+
+.main-link {
     background-color: #f1f1f1;
-    border-radius: 8px;
-    max-width: 500px;
-    margin: 0 auto;
+    color: #333;
+    display: inline-block;
+    line-height: 1;
+    border: 1px solid #ccc;
 }
 
-.round-summary {
-    background-color: white;
-    padding: 12px;
-    margin-bottom: 12px;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.main-link:hover {
+    background-color: #ddd;
+    color: black;
 }
-
-.round-summary h4 {
-    margin-bottom: 6px;
-}
-
-/*.restart-btn {*/
-/*    background-color: #f44336;*/
-/*    color: white;*/
-/*    padding: 10px 20px;*/
-/*    margin-top: 20px;*/
-/*    font-size: 16px;*/
-/*    border: none;*/
-/*    border-radius: 8px;*/
-/*    cursor: pointer;*/
-/*    transition: background-color 0.3s ease;*/
-/*}*/
-
-/*.restart-btn:hover {*/
-/*    background-color: #d32f2f;*/
-/*}*/
-
 
 /*Result Block*/

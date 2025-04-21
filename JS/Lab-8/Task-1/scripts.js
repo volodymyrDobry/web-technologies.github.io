@@ -1,10 +1,8 @@
 const gameContainer = document.querySelector(".game-container");
 const cardsContainer = document.querySelector(".cards");
 const introContainer = document.querySelector(".intro");
-const resultContainer = document.querySelector(".result");
 const playerInputsDiv = document.getElementById("playerInputs");
 const playerModeSelect = document.getElementById("playerMode");
-const restartBtn = document.querySelector(".restart-btn");
 
 let currentCard = null;
 const markUp = {
@@ -40,7 +38,7 @@ cardsContainer.addEventListener("mousedown", (event) => {
 })
 
 playerModeSelect.addEventListener("change", showUsernameInputs);
-restartBtn.addEventListener("click",restartGame);
+
 
 function compareCards(currentCard, prevCard){
     const currentImg = currentCard.querySelector(".card-img");
@@ -139,66 +137,6 @@ function checkGameStatus() {
     return cards
         .map(card => card.querySelector(".card-inner"))
         .every(inner => inner.classList.contains("flipped"));
-}
-
-function renderSinglePlayerModeScreen(block){
-    block.innerHTML = "";
-    const userResult = game.users[game.currentActiveUser];
-    const singleUserResult = `
-        <h3>Summary for <span class="result-username">${userResult.username}</span></h3>
-        <p>Points: <span class="result-points">${userResult.points}</span></p>
-        <p>Attempts: <span class="result-attempts">${userResult.attempts}</span></p>
-        <p>Time Spent: <span class="result-time">${game.difficulty - userResult.timeLeft}</span> sec</p>
-        `;
-    const restartBtn = document.createElement("button");
-    restartBtn.classList.add("btn");
-    restartBtn.classList.add("restart-btn");
-    restartBtn.addEventListener("click",restartGame);
-    restartBtn.innerText = "Restart Game";
-    block.innerHTML += singleUserResult;
-    block.appendChild(restartBtn);
-}
-
-function showSinglePlayerModeEndScreen(){
-    const resultBlock = document.querySelector(".result");
-    const singleResultBlock = document.querySelector(".result-single");
-    gameContainer.style.display = "none";
-    resultBlock.style.display = "block";
-    singleResultBlock.style.display = "block";
-    renderSinglePlayerModeScreen(singleResultBlock);
-}
-
-function renderMultiPlayerModeScreen(block) {
-    block.innerHTML = `<h3>Match Summary</h3>`;
-
-    matchHistory.forEach(record => {
-        const roundHTML = `
-            <div class="round-summary">
-                <h4>Round ${record.matchNumber}</h4>
-                <p><strong>${users[0].username}</strong> - Points: ${record.user1.points}, Attempts: ${record.user1.attempts}</p>
-                <p><strong>${users[1].username}</strong> - Points: ${record.user2.points}, Attempts: ${record.user2.attempts}</p>
-            </div>
-        `;
-        block.innerHTML += roundHTML;
-    });
-
-    block.innerHTML += `<button class="btn restart-btn">Restart Game</button>`;
-}
-
-function showDoublePlayerModeEndScreen() {
-    const resultBlock = document.querySelector(".result");
-    const multiResultBlock = document.querySelector(".result-multiplayer");
-
-    gameContainer.style.display = "none";
-    resultBlock.style.display = "block";
-    multiResultBlock.style.display = "block";
-
-    renderMultiPlayerModeScreen(multiResultBlock);
-
-}
-
-function hideResultScreen() {
-    resultContainer.style.display = "none";
 }
 
 function showUsernameInputs(){

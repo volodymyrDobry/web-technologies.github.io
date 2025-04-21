@@ -52,31 +52,18 @@
                 </aside>
             </div>
         </div>
-        <div class="result">
-            <h2 class="result-title">Game Over</h2>
-
-            <div class="result-single">
+        <div class="result-window">
+            <div class="result-window-header">
+                <ul class="rounds">
+                </ul>
             </div>
-
-            <div class="result-multiplayer">
-                <h3>Round Breakdown</h3>
-                <div class="result-rounds-wrapper">
-                </div>
-
-                <h3>Final Scores</h3>
-                <div class="result-players-summary">
-                    <div class="result-player">
-                        <h4 class="player-name" id="player1-name"></h4>
-                        <p>Points: <span id="player1-points"></span></p>
-                        <p>Attempts: <span id="player1-attempts"></span></p>
-                        <p>Time Left: <span id="player1-time"></span> sec</p>
-                    </div>
-                    <div class="result-player">
-                        <h4 class="player-name" id="player2-name"></h4>
-                        <p>Points: <span id="player2-points"></span></p>
-                        <p>Attempts: <span id="player2-attempts"></span></p>
-                        <p>Time Left: <span id="player2-time"></span> sec</p>
-                    </div>
+            <div class="result-window-main">
+            </div>
+            <div class="result-window-footer">
+                <h2 class="result-window-footer-title"></h2>
+                <div class="btns-section">
+                    <button class="btn-restart" id="restartBtn">Restart</button>
+                    <a class="main-link">Go to Menu</a>
                 </div>
             </div>
         </div>
@@ -85,5 +72,6 @@
 <script src="scripts.js"></script>
 <script src="usersScripts.js"></script>
 <script src="gameScripts.js"></script>
+<script src="endGameScripts.js"></script>
 </body>
 </html>
