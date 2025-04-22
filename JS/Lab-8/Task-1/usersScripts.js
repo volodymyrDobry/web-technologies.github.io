@@ -3,10 +3,13 @@ const users = [];
 let timerInterval;
 
 function switchUser(){
-    if (!game.twoPlayersMode)
-        return;
-
     const turnHolder = document.querySelector(".game-header-turn");
+
+    if (!game.twoPlayersMode) {
+        turnHolder.innerHTML = "Your Move!";
+        return;
+    }
+
     if (game.currentActiveUser === 0) {
         game.currentActiveUser = 1;
     }
@@ -78,5 +81,12 @@ function resetUsers(){
         user.timeLeft = game.difficulty;
         user.attempts = 0;
         user.points = 0;
+    }
+}
+
+function clearUserAsides(){
+    const asides = document.querySelectorAll(".user-aside");
+    for (const aside of asides){
+        aside.innerHTML = "";
     }
 }

@@ -39,7 +39,6 @@ cardsContainer.addEventListener("mousedown", (event) => {
 
 playerModeSelect.addEventListener("change", showUsernameInputs);
 
-
 function compareCards(currentCard, prevCard){
     const currentImg = currentCard.querySelector(".card-img");
     const targetImg = prevCard.querySelector(".card-img");
@@ -130,13 +129,6 @@ function renderGame(){
     let fruits = generateCards(game.cardsQuantity);
     displayCards(fruits);
     displayUsers();
-}
-
-function checkGameStatus() {
-    const cards = Array.from(cardsContainer.children);
-    return cards
-        .map(card => card.querySelector(".card-inner"))
-        .every(inner => inner.classList.contains("flipped"));
 }
 
 function showUsernameInputs(){

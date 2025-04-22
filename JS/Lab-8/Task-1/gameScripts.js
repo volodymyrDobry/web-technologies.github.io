@@ -14,7 +14,7 @@ const menuBtn = document.querySelector(".main-link");
 
 const matchHistory = {};
 startGameBtn.addEventListener("click",setUpGameSettingsAndStartHandler);
-resetBtn.addEventListener("click",resetSettings);
+resetBtn.addEventListener("click",resetSettingsHandler);
 restartBtn.addEventListener("click",restartGameHandler);
 menuBtn.addEventListener("click",menuRedirectionHandler);
 
@@ -73,6 +73,7 @@ function endGameHandler(){
            nextRound();
        }else{
            showEndGamePage();
+           clearUserAsides();
        }
     }
 }
@@ -120,7 +121,7 @@ function restartGame(){
     startGame();
 }
 
-function resetSettings(){
+function resetSettingsHandler(){
     document.getElementById("difficulty").selectedIndex = 0;
     document.getElementById("cardQuantity").selectedIndex = 0;
     document.getElementById("playerMode").selectedIndex = 0;
@@ -132,7 +133,25 @@ function restartGameHandler(){
     restartGame();
 }
 
+function resetGameSettings(){
+    game.roundQuantity = 1;
+    game.currentRound = 1;
+    game.twoPlayersMode = false;
+    game.cardsQuantity = 6;
+    game.difficulty = 180;
+    game.currentActiveUser = 0;
+    users.length = 0;
+}
+
 function menuRedirectionHandler(){
+    resetGameSettings();
     resultWindow.style.display = "none";
     introContainer.style.display = "flex";
+}
+
+function checkGameStatus() {
+    const cards = Array.from(cardsContainer.children);
+    return cards
+        .map(card => card.querySelector(".card-inner"))
+        .every(inner => inner.classList.contains("flipped"));
 }
