@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="formStyles.css" rel="stylesheet" type="text/css"/>
+    <title>Forms</title>
+</head>
+<body>
+<div class="wrapper">
+  <div class="form-wrapper">
+    <div class="form-nav">
+      <div class="nav-item" id="signUpNavItem">Sign Up</div>
+      <div class="nav-item active" id="loginNavItem">Login</div>
+    </div>
+    <form name="signUpForm" class="form sign-up-form">
+      <div class="form-item-name">
+        <div class="form-item">
+          <label class="form-item-label" for="FirstName">First Name <span style="color: red;">*</span></label>
+          <input class="form-item-input"
+                 id="FirstName"
+                 placeholder="Enter First Name"
+                 name="firstName"
+                 data-val="true"
+                 data-required="Введіть First Name"
+                 data-pattern="^.{3,15}$"
+                 data-error-label="firstNameErrorLabel"
+          >
+          <span class="error" id="firstNameErrorLabel">Помилка</span>
+        </div>
+        <div class="form-item">
+          <label class="form-item-label" for="LastName">Last Name <span style="color: red;">*</span></label>
+          <input class="form-item-input"
+                 id="LastName"
+                 placeholder="Enter Last Name"
+                 name="lastName"
+                 data-val="true"
+                 data-required="Введіть Last Name"
+                 data-pattern="^.{3,15}$"
+                 data-error-label="lastNameErrorLabel"
+          >
+          <span class="error" id="lastNameErrorLabel">Помилка</span>
+        </div>
+      </div>
+      <div class="form-item">
+        <label class="form-item-label" for="Email">Email <span style="color: red;">*</span></label>
+        <input class="form-item-input"
+               id="Email"
+               placeholder="Enter Email"
+               name="email"
+               type="email"
+               data-val="true"
+               data-required="Введіть Email"
+               data-pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+               data-error-label="emailErrorLabel"
+        >
+        <span class="error" id="emailErrorLabel">Помилка</span>
+      </div>
+      <div class="form-item password-item">
+        <label class="form-item-label" for="password">Password <span style="color: red;">*</span></label>
+        <input class="form-item-input"
+               id="password"
+               placeholder="Enter Password"
+               name="password"
+               data-val="true"
+               data-required="Введіть Password"
+               data-pattern="^.{6,}$"
+               type="password"
+               data-error-label="passwordErrorLabel"
+               >
+        <img src="./icons/visibility_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="eye" class="password-icon opened">
+        <span class="error" id="passwordErrorLabel">Помилка</span>
+      </div>
+      <div class="form-item password-item" >
+        <label class="form-item-label" for="password-confirm">Confirm Password <span style="color: red;">*</span></label>
+        <input class="form-item-input"
+               id="password-confirm"
+               placeholder="Repeat Password"
+               type="password"
+               name="confirmedPassword"
+               data-val="true"
+               data-required="Введіть Confirm Password"
+               data-pattern="^.{6,}$"
+               data-error-label="confirmPasswordErrorLabel"
+               data-confirm="password"
+               >
+        <img src="./icons/visibility_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="eye" class="password-icon opened">
+        <span class="error" id="confirmPasswordErrorLabel">Помилка</span>
+      </div>
+      <div class="form-item">
+        <label class="form-item-label" for="phone">Phone <span style="color: red;">*</span></label>
+        <input class="form-item-input" id="phone" type="tel" name="phone" data-val="true"
+               data-required="Введіть First Name"
+               data-pattern="^\+380\d{9}$"
+               data-error-label="phoneErrorLabel"
+        >
+        <span class="error" id="phoneErrorLabel">Помилка</span>
+      </div>
+      <div class="form-item">
+        <label class="form-item-label" for="birthDate">Birth Date <span style="color: red;">*</span></label>
+        <input class="form-item-input"
+               id="birthDate"
+               type="date"
+               name="birthDate"
+               data-val="true"
+               data-required="Введіть birth Date"
+               data-error-label="birthDateErrorLabel"
+               data-birth-date="birthDate"
+        >
+        <span class="error" id="birthDateErrorLabel">Помилка</span>
+      </div>
+      <div class="form-item-sex">
+        <div class="form-item">
+          <label class="form-item-label" for="male">Male</label>
+          <input class="form-item-input" name="sex" id="male" type="radio" value="male" checked>
+        </div>
+        <div class="form-item">
+          <label class="form-item-label" for="female">Female</label>
+          <input class="form-item-input" name="sex" id="female" type="radio" value="female" >
+        </div>
+      </div>
+      <div class="form-item">
+        <label for="country" class="form-item-label">Country <span style="color: red;">*</span></label>
+        <select id="country" name="country" class="form-item-input" data-val="true"
+                data-required="Введіть First Name"
+                data-error-label="countryErrorLabel"
+                >
+          <option value="" disabled selected>Choose a country</option>
+          <option value="ua">Ukraine</option>
+          <option value="us">United States</option>
+          <option value="de">Germany</option>
+          <option value="fr">France</option>
+          <option value="jp">Japan</option>
+        </select>
+        <span class="error" id="countryErrorLabel">Помилка</span>
+      </div>
+      <div class="form-item form-item-city">
+        <label for="city" class="form-item-label">City <span style="color: red;">*</span></label>
+        <select id="city" name="city" class="form-item-input" data-val="true"
+                data-required="Оберіть Місто"
+                data-error-label="cityErrorLabel"
+        >
+          <option value="" disabled selected>Choose a city</option>
+        </select>
+        <span class="error" id="cityErrorLabel">Помилка</span>
+      </div>
+      <input type="submit" class="form-button" id="signUpBtn" value="SignUp">
+    </form>
+
+    <form name="loginForm" class="form login-form">
+      <div class="form-item">
+        <label class="form-item-label" for="username">Username <span style="color: red;">*</span></label>
+        <input class="form-item-input"
+               id="username"
+               name="login"
+               placeholder="Enter username"
+               data-val="true"
+               data-required="Введіть Username"
+              data-error-label="usernameErrorLabel"
+        >
+        <span class="error" id="usernameErrorLabel">Помилка</span>
+      </div>
+      <div class="form-item password-item">
+        <label class="form-item-label" for="login-password">Password <span style="color: red;">*</span></label>
+        <input class="form-item-input"
+               id="login-password"
+               placeholder="Enter Password"
+               name="password"
+               data-val="true"
+               data-required="Введіть First Name"
+               data-pattern="^.{6,}$"
+               type="password"
+               data-error-label="loginPasswordErrorLabel"
+        >
+        <img src="./icons/visibility_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="eye" class="password-icon opened">
+        <span class="error" id="loginPasswordErrorLabel">Помилка</span>
+      </div>
+      <div class="form-item remember-me-item">
+        <input type="checkbox" id="remember-me" name="remember-me">
+        <label for="remember-me">Remember Me</label>
+      </div>
+      <input type="submit" class="form-button" id="loginBtn" value="Login" >
+    </form>
+
+  </div>
+</div>
+<div id="toast-container"></div>
+<script src="formScripts.js"></script>
+</body>
+</html>

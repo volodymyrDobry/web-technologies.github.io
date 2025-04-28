@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+}
+
+.form-wrapper{
+    display: inline-block;
+    min-width: 400px;
+    width: 30%;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    min-height: 400px;
+}
+
+.form-nav{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.active, .nav-item:hover{
+    background-color: rgb(235,243,251);
+    color: rgb(116,170,222);
+}
+
+.active{
+    border: 1px solid rgb(166,196,219);
+}
+
+.nav-item{
+    flex: 1;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.form-item-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    transition: border 0.3s ease;
+    outline: none;
+}
+
+.form-item-label{
+    font-weight: bold;
+}
+
+.form-item-input:focus {
+    border: 2px solid rgb(166, 196, 219);
+}
+
+.form-item-name{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.form-button {
+    padding: 10px 0;
+    background-color: #499ff3;
+    color: ghostwhite;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-button:hover {
+    background-color: #2f87db;
+}
+
+.form-item-sex{
+    display: flex;
+}
+
+.form-item-sex > .form-item{
+    flex-direction: row;
+}
+
+.password-item{
+    position: relative;
+}
+
+.password-icon{
+    position: absolute;
+    right: 5px;
+    top: 30px;
+    cursor: pointer;
+}
+
+.sign-up-form{
+    display: none;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+.invalid {
+    border: red 1px solid;
+}
+
+.valid {
+    border: green 1px solid;
+}
+.form-item-city{
+    display: none;
+}
+
+.remember-me-item{
+    display: block;
+}
+
+.remember-me-item > label{
+    font-weight: bolder;
+}
+
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.toast {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    min-width: 200px;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease;
+    font-family: sans-serif;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
