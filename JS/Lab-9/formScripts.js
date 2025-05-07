@@ -105,10 +105,8 @@ function onSubmitHandler(e) {
 
     if (allValid) {
         console.log("Form is valid! 🥳");
-        const user = {};
-        for (let i = 0; i < form.elements.length; i++) {
-            user[form.elements[i].name] = form.elements[i].value;
-        }
+        let formData = new FormData(form);
+        const user = Object.fromEntries(formData);
         console.log(user);
         clearForm(form);
         showToast("Form is valid! 🥳");
@@ -164,7 +162,32 @@ validators.validate = function (element, message, predicate) {
 
 validators.required = {
     isValid: function (element) {
-        let message = element.dataset.required;
+        const message = element.dataset.required;
+        const name = element.name;
+
+        if (element.type === "radio") {
+            // check if any radio in the group is checked
+            const radios = document.querySelectorAll(`input[name="${name}"]`);
+            const isAnyChecked = Array.from(radios).some(r => r.checked);
+
+            // use the same error label for all radios in the group
+            const errorLabel = document.querySelector("#" + element.dataset.errorLabel);
+            radios.forEach(r => {
+                r.classList.remove("valid", "invalid");
+            });
+
+            if (isAnyChecked) {
+                radios.forEach(r => r.classList.add("valid"));
+                errorLabel.style.display = "none";
+                return true;
+            } else {
+                radios.forEach(r => r.classList.add("invalid"));
+                errorLabel.innerHTML = message;
+                errorLabel.style.display = "block";
+                return false;
+            }
+        }
+
         return validators.validate(element, message, () => element.value.length > 0);
     }
 };

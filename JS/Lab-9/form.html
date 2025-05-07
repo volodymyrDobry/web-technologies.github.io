@@ -111,12 +111,29 @@
       <div class="form-item-sex">
         <div class="form-item">
           <label class="form-item-label" for="male">Male</label>
-          <input class="form-item-input" name="sex" id="male" type="radio" value="male" checked>
+          <input class="form-item-input"
+                 name="sex"
+                 id="male"
+                 type="radio"
+                 value="male"
+                 data-required="Це поле є обов'язковим"
+                 data-val="true"
+                 data-error-label="sexErrorLabel"
+          >
         </div>
         <div class="form-item">
           <label class="form-item-label" for="female">Female</label>
-          <input class="form-item-input" name="sex" id="female" type="radio" value="female" >
+          <input class="form-item-input"
+                 name="sex"
+                 id="female"
+                 type="radio"
+                 value="female"
+                 data-required="Це поле є обов'язковим"
+                 data-val="true"
+                 data-error-label="sexErrorLabel"
+          >
         </div>
+        <span class="error" id="sexErrorLabel">Помилка</span>
       </div>
       <div class="form-item">
         <label for="country" class="form-item-label">Country <span style="color: red;">*</span></label>
@@ -155,7 +172,8 @@
                placeholder="Enter username"
                data-val="true"
                data-required="Введіть Username"
-              data-error-label="usernameErrorLabel"
+               data-error-label="usernameErrorLabel"
+               data-pattern="^.{3,15}$"
         >
         <span class="error" id="usernameErrorLabel">Помилка</span>
       </div>
@@ -175,7 +193,7 @@
         <span class="error" id="loginPasswordErrorLabel">Помилка</span>
       </div>
       <div class="form-item remember-me-item">
-        <input type="checkbox" id="remember-me" name="remember-me">
+        <input type="checkbox" id="remember-me" name="remember-me" value="true">
         <label for="remember-me">Remember Me</label>
       </div>
       <input type="submit" class="form-button" id="loginBtn" value="Login" >
