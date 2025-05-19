@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Main</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header-logo logo">
+                <img src="./resources/icons/header-icon.png" alt="header-icon" class="header-logo-icon logo-icon">
+                <span class="header-logo-title logo-title">Kiwi <br>Singles</span>
+            </div>
+            <div class="header-items">
+                <nav class="header-nav">
+                    <ul class="header-nav-list">
+                        <li class="header-nav-list-item"><a href="#">Home</a></li>
+                        <li class="header-nav-list-item"><a href="#">Profile</a></li>
+                        <li class="header-nav-list-item active"><a href="#">Proposals</a></li>
+                        <li class="header-nav-list-item"><a href="#">Support</a></li>
+                    </ul>
+                </nav>
+                <div class="header-filter-button">
+                    <img src="./resources/icons/tune_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg"
+                         class="header-filter-button-icon">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-filter-bar">
+            <div class="main-filter-bar-side">
+            </div>
+            <div class="main-filter-bar-content">
+                <div class="main-filter-bar-item">
+                    <p class="main-filter-bar-item-title">Gender</p>
+                    <div class="main-filter-bar-item-content main-filter-bar-item-gender">
+                        <label>
+                            <input type="radio" name="gender" id="man">
+                            Man
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" id="woman">
+                            Woman
+                        </label>
+                    </div>
+                </div>
+                <div class="main-filter-bar-item">
+                    <label class="main-filter-bar-item-title" for="religion">Religion</label>
+                    <div class="main-filter-bar-item-content">
+                        <input type="text" id="religion" class="main-filter-bar-item-content-input"
+                               placeholder="Set religion">
+                    </div>
+                </div>
+                <div class="main-filter-bar-item">
+                    <label class="main-filter-bar-item-title" for="country">Country</label>
+                    <div class="main-filter-bar-item-content">
+                        <input type="text" id="country" class="main-filter-bar-item-content-input"
+                               placeholder="Set country">
+                    </div>
+                </div>
+                <div class="main-filter-bar-item">
+                    <label class="main-filter-bar-item-title" for="profession">Profession</label>
+                    <div class="main-filter-bar-item-content">
+                        <input type="text" id="profession" class="main-filter-bar-item-content-input"
+                               placeholder="Set profession">
+                    </div>
+                </div>
+                <div class="main-filter-bar-item">
+                    <label class="main-filter-bar-item-title" for="sorting">Sorting</label>
+                    <div class="main-filter-bar-item-content">
+                        <input type="text" id="sorting" class="main-filter-bar-item-content-input"
+                               placeholder="Set Sorting">
+                    </div>
+                </div>
+                <button type="button" class="main-filter-bar-btn filter-btn">Filter Proposals</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-picture-container">
+                        <div class="card-picture-header">
+                            <img src="resources/icons/star_24dp_5084C1_FILL0_wght400_GRAD0_opsz24.svg"
+                                 class="card-header-icon icon-star" alt="star">
+                            <span class="card-picture-header-occupation">Nurse</span>
+                            <img src="resources/icons/error_24dp_EA3323_FILL0_wght400_GRAD0_opsz24.svg"
+                                 class="card-header-icon icon-error" alt="error">
+                        </div>
+                        <img src="resources/images/photo-1438761681033-6461ffad8d80.jpg" class="card-picture"
+                             height="200" width="320">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-content-header">
+                            <div class="card-content-header-item">
+                                <span class="card-content-header-item-title">Name</span>
+                                <span class="card-content-header-item-content">Volodymyrina</span>
+                            </div>
+                            <div class="card-content-header-item">
+                                <span class="card-content-header-item-title">Country</span>
+                                <span class="card-content-header-item-content">France</span>
+                            </div>
+                        </div>
+                        <div class="card-content-main">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at autem corporis cum
+                            delectus eum ex explicabo facilis illum iste iusto
+                        </div>
+                        <div class="card-content-footer">
+                            <a class="card-content-footer-btn">
+                                More Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-picture-container">
+                        <div class="card-picture-header">
+                            <img src="resources/icons/star_24dp_5084C1_FILL0_wght400_GRAD0_opsz24.svg"
+                                 class="card-header-icon icon-star" alt="star">
+                            <span class="card-picture-header-occupation">Nurse</span>
+                            <img src="resources/icons/error_24dp_EA3323_FILL0_wght400_GRAD0_opsz24.svg"
+                                 class="card-header-icon icon-error" alt="error">
+                        </div>
+                        <img src="resources/images/photo-1438761681033-6461ffad8d80.jpg" class="card-picture"
+                             height="200" width="320">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-content-header">
+                            <div class="card-content-header-item">
+                                <span class="card-content-header-item-title">Name</span>
+                                <span class="card-content-header-item-content">Volodymyrina</span>
+                            </div>
+                            <div class="card-content-header-item">
+                                <span class="card-content-header-item-title">Country</span>
+                                <span class="card-content-header-item-content">France</span>
+                            </div>
+                        </div>
+                        <div class="card-content-main">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at autem corporis cum
+                            delectus eum ex explicabo facilis illum iste iusto
+                        </div>
+                        <div class="card-content-footer">
+                            <a class="card-content-footer-btn">
+                                More Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-picture-container">
+                        <div class="card-picture-header">
+                            <img src="resources/icons/star_24dp_5084C1_FILL0_wght400_GRAD0_opsz24.svg"
+                                 class="card-header-icon icon-star" alt="star">
+                            <span class="card-picture-header-occupation">Nurse</span>
+                            <img src="resources/icons/error_24dp_EA3323_FILL0_wght400_GRAD0_opsz24.svg"
+                                 class="card-header-icon icon-error" alt="error">
+                        </div>
+                        <img src="resources/images/photo-1438761681033-6461ffad8d80.jpg" class="card-picture"
+                             height="200" width="320">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-content-header">
+                            <div class="card-content-header-item">
+                                <span class="card-content-header-item-title">Name</span>
+                                <span class="card-content-header-item-content">Volodymyrina</span>
+                            </div>
+                            <div class="card-content-header-item">
+                                <span class="card-content-header-item-title">Country</span>
+                                <span class="card-content-header-item-content">France</span>
+                            </div>
+                        </div>
+                        <div class="card-content-main">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at autem corporis cum
+                            delectus eum ex explicabo facilis illum iste iusto
+                        </div>
+                        <div class="card-content-footer">
+                            <a class="card-content-footer-btn">
+                                More Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-picture-container">
+                        <div class="card-picture-header">
+                            <img src="resources/icons/star_24dp_5084C1_FILL0_wght400_GRAD0_opsz24.svg"
+                                 class="card-header-icon icon-star" alt="star">
+                            <span class="card-picture-header-occupation">Nurse</span>
+                            <img src="resources/icons/error_24dp_EA3323_FILL0_wght400_GRAD0_opsz24.svg"
+                                 class="card-header-icon icon-error" alt="error">
+                        </div>
+                        <img src="resources/images/photo-1438761681033-6461ffad8d80.jpg" class="card-picture"
+                             height="200" width="320">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-content-header">
+                            <div class="card-content-header-item">
+                                <span class="card-content-header-item-title">Name</span>
+                                <span class="card-content-header-item-content">Volodymyrina</span>
+                            </div>
+                            <div class="card-content-header-item">
+                                <span class="card-content-header-item-title">Country</span>
+                                <span class="card-content-header-item-content">France</span>
+                            </div>
+                        </div>
+                        <div class="card-content-main">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at autem corporis cum
+                            delectus eum ex explicabo facilis illum iste iusto
+                        </div>
+                        <div class="card-content-footer">
+                            <a class="card-content-footer-btn">
+                                More Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-paging-section">
+                <a class="paging-item">1</a>
+                <a class="paging-item">2</a>
+                <a class="paging-item">3</a>
+                <span class="paging-arrow">...</span>
+                <a class="paging-item">14</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content-section">
+                <div class="footer-inputs">
+                    <div class="footer-logo logo">
+                        <img src="./resources/icons/header-icon.png" alt="header-icon"
+                             class="header-logo-icon logo-icon">
+                        <span class="header-logo-title logo-title">Kiwi <br>Singles</span>
+                    </div>
+                    <div class="footer-inputs-item">
+                        <button class="footer-input-button">
+                            <img src="./resources/icons/search_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                        </button>
+                        <input class="footer-input" placeholder="Register email">
+                    </div>
+                    <div class="footer-inputs-item">
+                        <button class="footer-input-button">
+                            <img src="./resources/icons/mail_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                        </button>
+                        <input class="footer-input" placeholder="Search Proposal">
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <div class="footer-info-item">
+                        <h3 class="footer-info-item-tile">Social Media</h3>
+                        <ul class="footer-info-item-list">
+                            <li class="footer-info-item-list-item"><a>Facebook</a></li>
+                            <li class="footer-info-item-list-item"><a>Instagram</a></li>
+                            <li class="footer-info-item-list-item"><a>Twitter</a></li>
+                            <li class="footer-info-item-list-item"><a>Youtube</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-info-item">
+                        <h3 class="footer-info-item-tile">Pages</h3>
+                        <ul class="footer-info-item-list">
+                            <li class="footer-info-item-list-item"><a>Landing Page</a></li>
+                            <li class="footer-info-item-list-item"><a>Home Page</a></li>
+                            <li class="footer-info-item-list-item"><a>Login Page</a></li>
+                            <li class="footer-info-item-list-item"><a>Profile Page</a></li>
+                            <li class="footer-info-item-list-item"><a>Proposal Page</a></li>
+                            <li class="footer-info-item-list-item"><a>Support Page</a></li>
+                            <li class="footer-info-item-list-item"><a>Dashboard Page</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-info-item">
+                        <h3 class="footer-info-item-tile">Support</h3>
+                        <ul class="footer-info-item-list">
+                            <li class="footer-info-item-list-item"><a>How To Make Profile?</a></li>
+                            <li class="footer-info-item-list-item"><a>How To Send Proposal?</a></li>
+                            <li class="footer-info-item-list-item"><a>How To Find Person?</a></li>
+                            <li class="footer-info-item-list-item"><a>How To Use Filter?</a></li>
+                            <li class="footer-info-item-list-item"><a>How To Communicate?</a></li>
+                            <li class="footer-info-item-list-item"><a>How To Set Unavailable?</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright-section">
+                <span class="copyright-sign">&copy;</span>
+                <p class="footer-copyright-title">
+                    All rights Reserve By Volodymyr Dobrianskyi
+                </p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

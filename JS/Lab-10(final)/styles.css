@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Common Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Header */
+.header {
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-icon {
+    height: 80px;
+}
+
+.logo-title {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 900;
+    font-size: 30px;
+    color: #D41717;
+    display: inline-block;
+}
+
+.header-filter-button-icon {
+    height: 50px;
+    cursor: pointer;
+}
+
+.header-nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.header-nav-list-item a {
+    text-decoration: none;
+    color: #6D7D6E;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header-nav-list-item a:hover {
+    color: #D41717;
+}
+
+.active a {
+    text-decoration: underline;
+    color: #D41717;
+}
+
+.header-items {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/*Main*/
+.main{
+    margin-bottom: 40px;
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    background-color: #f1f1f1;
+    border-radius: 20px; /* Rounding the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Smooth shadow */
+    overflow: hidden; /* So child elements like image corners don't overflow */
+}
+
+.card-picture-container{
+    position: relative;
+}
+
+.card-picture-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(12, 12, 12, 0.3); /* light semi-transparent grey */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 1;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-picture-header-occupation{
+    color: white;
+    font-weight: bold;
+}
+
+.card-header-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Star hover effect */
+.icon-star:hover {
+    transform: scale(1.2);
+    filter: brightness(1.4) drop-shadow(0 0 2px #5084C1);
+}
+
+/* Error icon hover effect */
+.icon-error:hover {
+    transform: scale(1.2) rotate(10deg);
+    filter: brightness(1.4) drop-shadow(0 0 2px #EA3323);
+}
+
+.card-picture{
+    border-radius: 20px;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.card-content-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content-header-item{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-content-header-item-title{
+    color: grey;
+}
+
+.card-content-header-item-content{
+    color: #5f7173;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-content-main{
+    color: grey;
+}
+
+.card-content-footer-btn {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #42AFC2;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth animation for all properties */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Hover animation */
+.card-content-footer-btn:hover {
+    background-color: #2b99ac; /* Darker shade on hover */
+    transform: scale(1.05);     /* Slight zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-content-footer-btn:active {
+    transform: scale(0.98); /* Small "press" effect */
+}
+
+.card-content-footer-btn:active {
+    transform: scale(0.98); /* Small "press" effect */
+}
+
+.main-paging-section{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.main-paging-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.paging-item {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: #f1f1f1;
+    color: #42AFC2;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paging-item:hover {
+    background-color: #dcecec;
+    transform: scale(1.05);
+}
+
+.paging-item-active {
+    background-color: #42AFC2;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.paging-arrow {
+    color: #42AFC2;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 8px;
+    user-select: none;
+}
+
+/*Main*/
+
+/* Footer */
+.footer {
+    background-color: #f1f1f1;
+    padding: 50px 20px 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-content-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #D41717;
+}
+
+.footer-inputs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 280px;
+}
+
+.footer-inputs-item {
+    display: inline-flex;
+    max-width: 300px;
+}
+
+.footer-input,
+.footer-input-button {
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+
+.footer-input {
+    border: 2px solid #117182;
+    padding: 0 10px;
+    border-radius: 0 4px 4px 0;
+    flex: 1;
+}
+
+.footer-input-button {
+    background-color: #117182;
+    color: white;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px 0 0 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-input-button:hover {
+    background-color: #0d5a68;
+}
+
+.footer-info {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.footer-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 200px;
+}
+
+.footer-info-item-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.footer-info-item-tile {
+    color: #137283;
+}
+
+.footer-info-item-list-item a{
+    color: #42AFC2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-info-item-list-item a:hover{
+    color: #0d5a68;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-copyright-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #D41717;
+    font-size: 18px;
+}
+
+.copyright-sign{
+    font-size: 30px;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.main .container{
+    margin: 0;
+}
+
+
+.main-filter-bar{
+    display: inline-flex;
+    width: 450px;
+    max-height: 500px;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-right: 20px;
+}
+
+.main-filter-bar-side{
+    padding: 20px;
+    background-color: #D41717;
+    width: 50px;
+}
+
+.main-filter-bar-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.main-filter-bar-item-title{
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.main-filter-bar-item-content-input{
+    border: 2px solid #0d5a68;
+    padding: 6px 10px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.main-filter-bar-item-content{
+    padding-left: 10px;
+}
+
+.main-filter-bar-item-gender{
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn{
+    background-color: #42AFC2;
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.filter-btn:hover {
+    background-color: #369aad;
+}
